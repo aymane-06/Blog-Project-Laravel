@@ -83,7 +83,6 @@ class ArticleController extends Controller
         $article->title = $request->title;
         $article->content = $request->content;
         $article->category_id = $request->category;
-        $article->status=$request->status;
         $article->user_id = auth()->id();
         if ($request->hasFile('image')) {
             $article->image = $request->file('image')->store('articles');
